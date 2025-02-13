@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  html li {
+    list-style-type: none;
+  }
+  
