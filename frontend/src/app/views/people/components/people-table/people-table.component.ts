@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../../../environments/environment';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-people-table',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './people-table.component.html',
   styleUrl: './people-table.component.css'
 })

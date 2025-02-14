@@ -1,5 +1,3 @@
-<h2>BSG Person Table</h2>
-
 @if(people.length == 0) {
 <p>No people on bsg found.</p>
 }@else{
@@ -24,7 +22,7 @@
             <td>{{person.homeworld}}</td>
             <td>{{person.age}}</td>
             <td>
-                <button title="Edit">
+                <button title="Edit" [routerLink]="['people/edit/', person.id]">
                     Edit
                 </button>
             </td>
