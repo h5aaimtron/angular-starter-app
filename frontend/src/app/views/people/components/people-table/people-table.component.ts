@@ -17,7 +17,7 @@ export class PeopleTableComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    this.loadPeople();
   }
 
   /**
