@@ -1,0 +1,40 @@
+<h2>BSG Person Table</h2>
+
+@if(people.length == 0) {
+<p>No people on bsg found.</p>
+}@else{
+<table>
+    <thead>
+        <tr>
+            <th>Person ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Homeworld</th>
+            <th>Age</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(person of people; track person.id) {
+        <tr>
+            <td>{{person.id}}</td>
+            <td>{{person.fname}}</td>
+            <td>{{person.lname}}</td>
+            <td>{{person.homeworld}}</td>
+            <td>{{person.age}}</td>
+            <td>
+                <button title="Edit">
+                    Edit
+                </button>
+            </td>
+            <td>
+                <button title="Delete" (click)="delete(person.id)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
