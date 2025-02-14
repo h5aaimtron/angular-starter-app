@@ -43,6 +43,7 @@ export class EditPeopleComponent {
       },
       error: (error) => {
         console.error(error);
+        alert(error.data.message);
       }
     })
    }
@@ -65,16 +66,18 @@ export class EditPeopleComponent {
         },
         error: (error) => {
           console.error(error);
+          alert(error.data.message);
         }
       });
     } else {
       // Add the user if they are new.
       this.httpClient.post(environment.apiBaseUrl + "people", this.person).subscribe({
         next: (response: any) => {
-
+          this.router.navigate(['people']);
         },
         error: (error) => {
           console.error(error);
+          alert(error.data.message);
         }
       })
     }

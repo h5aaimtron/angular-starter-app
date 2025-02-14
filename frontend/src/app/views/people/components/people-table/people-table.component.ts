@@ -32,6 +32,7 @@ export class PeopleTableComponent implements OnInit {
       },
       error: (error) => {
         console.error(error)
+        alert(error.data.message);
       }
     });
   }
